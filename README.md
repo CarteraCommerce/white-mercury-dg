@@ -39,3 +39,15 @@ Options
 	-Dcycles=[number of rows to generate in target]
 
 		Defaults to 100 rows.  Only applicable when runMode is set to 'database' or 'json'.
+
+Notes
+-----
+Compiled (mvn clean package) and ran:  
+	java -jar target/white-mercury-dg-0.0.1-SNAPSHOT-shaded.jar  
+Error:  
+	Could not find or load main class com.brc.white-mercury-dg.WhiteMercuryDGMain  
+
+Et cetera
+---------
+Once upon a midnight dreary  
+While I pondered weak and weary
