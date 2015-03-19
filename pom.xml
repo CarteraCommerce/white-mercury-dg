@@ -8,6 +8,12 @@
   <name>white-mercury-dg</name>
   <description>The White Mercury Data Generation Tool</description>
 
+	<scm>
+		<url>https://github.com/CarteraCommerce/white-mercury-dg</url>
+		<connection>scm:git:git://github.com/CarteraCommerce/white-mercury-dg.git</connection>
+		<developerConnection>scm:git:git@github.com:CarteraCommerce/white-mercury-dg.git</developerConnection>
+	</scm>
+
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
