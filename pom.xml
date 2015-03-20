@@ -3,7 +3,7 @@
 
   <groupId>com.brc</groupId>
   <artifactId>white-mercury-dg</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.7-SNAPSHOT</version>
 
   <name>white-mercury-dg</name>
   <description>The White Mercury Data Generation Tool</description>
@@ -12,7 +12,7 @@
 		<url>https://github.com/CarteraCommerce/white-mercury-dg</url>
 		<connection>scm:git:git://github.com/CarteraCommerce/white-mercury-dg.git</connection>
 		<developerConnection>scm:git:git@github.com:CarteraCommerce/white-mercury-dg.git</developerConnection>
-    <tag>white-mercury-dg-0.0.6</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
