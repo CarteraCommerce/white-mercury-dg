@@ -10,7 +10,7 @@
 
 	<scm>
 		<url>https://github.com/CarteraCommerce/white-mercury-dg</url>
-		<connection>scm:git:git://github.com/CarteraCommerce/white-mercury-dg.git</connection>
+		<connection>scm:git:git@github.com:CarteraCommerce/white-mercury-dg.git</connection>
 		<developerConnection>scm:git:git@github.com:CarteraCommerce/white-mercury-dg.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
