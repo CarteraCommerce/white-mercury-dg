@@ -5,7 +5,7 @@
 
     <groupId>com.brc</groupId>
     <artifactId>white-mercury-dg</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
 
     <name>white-mercury-dg</name>
     <description>The White Mercury Data Generation Tool</description>
