@@ -5,15 +5,15 @@ package generator.jarloader;
  
         Copyright (c) Non, Inc. 1999 -- All Rights Reserved
  
-PACKAGE:	JavaWorld
-FILE:		JarClassLoader.java
+PACKAGE:    JavaWorld
+FILE:       JarClassLoader.java
  
-AUTHOR:		John D. Mitchell, Mar  3, 1999
+AUTHOR:     John D. Mitchell, Mar  3, 1999
  
 REVISION HISTORY:
-        Name	Date		Description
-        ----	----		-----------
-        JDM	99.03.03   	Initial version.
+        Name    Date        Description
+        ----    ----        -----------
+        JDM 99.03.03    Initial version.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
@@ -23,7 +23,7 @@ REVISION HISTORY:
  ** instantiate a class which resides in a .jar file.
  * <br><br>
  **
- ** @author	John D. Mitchell, Non, Inc., Mar  3, 1999
+ ** @author John D. Mitchell, Non, Inc., Mar  3, 1999
  **
  ** @version 0.5
  **
@@ -31,7 +31,7 @@ REVISION HISTORY:
 
 public class JarClassLoader extends MultiClassLoader
 {
-    private JarResources	jarResources;
+    private JarResources    jarResources;
     
     public JarClassLoader(String jarName)
     {
@@ -47,4 +47,4 @@ public class JarClassLoader extends MultiClassLoader
         // Attempt to get the class data from the JarResource.
         return (jarResources.getResource(className));
     }
-}	// End of Class JarClassLoader.
+}   // End of Class JarClassLoader.

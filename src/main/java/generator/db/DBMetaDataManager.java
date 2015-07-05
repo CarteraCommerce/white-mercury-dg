@@ -30,7 +30,7 @@ public class DBMetaDataManager
     private Logger logger = Logger.getLogger(DBMetaDataManager.class);
     private String driverLocation;
     private String driverClass;
-	private String url, user, password;
+    private String url, user, password;
     private Connection connection;
     private JarClassLoader jarClassLoader;
     
@@ -335,43 +335,43 @@ public class DBMetaDataManager
         logger.debug("Disconnected!");
     }
 
-	public String getDriverLocation() {
-		return driverLocation;
-	}
+    public String getDriverLocation() {
+        return driverLocation;
+    }
 
-	public void setDriverLocation(String driverLocation) {
-		this.driverLocation = driverLocation;
-	}
+    public void setDriverLocation(String driverLocation) {
+        this.driverLocation = driverLocation;
+    }
 
     public String getDriverClass() {
-		return driverClass;
-	}
+        return driverClass;
+    }
 
-	public void setDriverClass(String driverClass) {
-		this.driverClass = driverClass;
-	}
+    public void setDriverClass(String driverClass) {
+        this.driverClass = driverClass;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-	public String getUser() {
-		return user;
-	}
+    public String getUser() {
+        return user;
+    }
 
-	public void setUser(String user) {
-		this.user = user;
-	}
+    public void setUser(String user) {
+        this.user = user;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

@@ -155,32 +155,32 @@ public class DBGeneratorDefinition
     }
     
     public String outputDefinition() {
-    	int index = 0;
-    	String output = "";
-    	
-    	output = output + "\n********************************************************************************\n";
-    	output = output + "DBGeneratorDefinition" + "\n";
-    	output = output + "\tScenario:\t\t\t" + this.scenario + "\n";
-    	output = output + "\tDescription:\t\t\t" + this.description + "\n";
-    	output = output + "\tFile Name:\t\t\t" + this.filename + "\n";
-    	output = output + "\tDatabase Driver:\t\t" + this.dbDriver + "\n";
-    	output = output + "\tDatabase URL:\t\t\t" + this.dbURL + "\n";
-    	output = output + "\tUser:\t\t\t\t" + this.user + "\n";
-    	output = output + "\tNumber of Cycles:\t\t" + String.valueOf(this.cycles) + "\n";
-    	output = output + "\tEnclose in Transaction?:\t" + String.valueOf(this.encInTransaction) + "\n";
-    	output = output + "\tList of Table Generators:" + "\n";
+        int index = 0;
+        String output = "";
+        
+        output = output + "\n********************************************************************************\n";
+        output = output + "DBGeneratorDefinition" + "\n";
+        output = output + "\tScenario:\t\t\t" + this.scenario + "\n";
+        output = output + "\tDescription:\t\t\t" + this.description + "\n";
+        output = output + "\tFile Name:\t\t\t" + this.filename + "\n";
+        output = output + "\tDatabase Driver:\t\t" + this.dbDriver + "\n";
+        output = output + "\tDatabase URL:\t\t\t" + this.dbURL + "\n";
+        output = output + "\tUser:\t\t\t\t" + this.user + "\n";
+        output = output + "\tNumber of Cycles:\t\t" + String.valueOf(this.cycles) + "\n";
+        output = output + "\tEnclose in Transaction?:\t" + String.valueOf(this.encInTransaction) + "\n";
+        output = output + "\tList of Table Generators:" + "\n";
         
         if (dbTableGenerators != null && !(dbTableGenerators.isEmpty())) {
-	        for (DBTableGenerator dbTableGen: dbTableGenerators) {
-	        	output = output + "\t\tTable Generator [" + String.valueOf(index) + "]:" + "\n";
-	        	output = output + dbTableGen.outputTableGenerator() + "\n";
-	        	index++;
-	        }
+            for (DBTableGenerator dbTableGen: dbTableGenerators) {
+                output = output + "\t\tTable Generator [" + String.valueOf(index) + "]:" + "\n";
+                output = output + dbTableGen.outputTableGenerator() + "\n";
+                index++;
+            }
         } else {
-        	output = output + "\t\tEmpty List" + "\n";
+            output = output + "\t\tEmpty List" + "\n";
         }
         output = output + "********************************************************************************\n";
-    	
-    	return output;
+        
+        return output;
     }
 }
