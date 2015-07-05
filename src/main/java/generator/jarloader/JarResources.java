@@ -161,4 +161,4 @@ public final class JarResources
         
         return (sb.toString());
     }        
-}	// End of JarResources class.
+}   // End of JarResources class.

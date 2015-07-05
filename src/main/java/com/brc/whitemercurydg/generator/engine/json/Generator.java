@@ -209,12 +209,12 @@ public class Generator implements ProgressUpdateObservable {
         cancelled = false;
         
         try {
-        	fileWriter.write("[");
-        	fileWriter.newLine();
+            fileWriter.write("[");
+            fileWriter.newLine();
         } catch (IOException ioe) {
-		    logger.warn("Exception error while writing data", ioe);
-		    error=true;
-		}
+            logger.warn("Exception error while writing data", ioe);
+            error=true;
+        }
         
         while (i<numOfRecs && !error && !cancelled) {
             try {
@@ -253,7 +253,7 @@ public class Generator implements ProgressUpdateObservable {
                         sb.append(value);
                         sb.append(enclChar);
                     } else {
-                    	sb.append(value);
+                        sb.append(value);
                     }
                     sb.append(dataFileDefinition.getDelimiter());
                     sb.append("\n");
@@ -263,9 +263,9 @@ public class Generator implements ProgressUpdateObservable {
                 
                 sb.deleteCharAt(sb.lastIndexOf(dataFileDefinition.getDelimiter()));
                 if ((i+1) == numOfRecs) {
-                	sb.append("\t}");
+                    sb.append("\t}");
                 } else {
-                	sb.append("\t},");
+                    sb.append("\t},");
                 }
                 outLine = sb.toString();
                 fileWriter.write(outLine);
@@ -279,8 +279,8 @@ public class Generator implements ProgressUpdateObservable {
         }
         
         try {
-        	fileWriter.write("]");
-        	fileWriter.newLine();
+            fileWriter.write("]");
+            fileWriter.newLine();
             fileWriter.close();
         } catch (IOException ioe) {
             logger.warn("Exception error while closing file:", ioe);
@@ -315,17 +315,17 @@ public class Generator implements ProgressUpdateObservable {
     
     public void notifyMaxProgressValue(int max) {
         if (observer!=null) {
-        	observer.dataGenMaxProgressValue(max);
+            observer.dataGenMaxProgressValue(max);
         }
     }
     
     public boolean notifyProgrssUpdate(String msg, int progress) {
-    	boolean shouldContinue = false;
-    	
+        boolean shouldContinue = false;
+        
         if (observer!=null) {
-        	shouldContinue = observer.dataGenProgressContinue(msg, progress);
+            shouldContinue = observer.dataGenProgressContinue(msg, progress);
         } else {
-        	shouldContinue = false;
+            shouldContinue = false;
         }
         
         return shouldContinue;
@@ -333,15 +333,15 @@ public class Generator implements ProgressUpdateObservable {
     
     public void notifyEnd() {
         if (observer!=null) {
-	        observer.dataGenEnd();
-	        observer=null;
+            observer.dataGenEnd();
+            observer=null;
         }
     }
     
     public void datageGenError(String msg) {
         if (observer!=null) {
-	        observer.datageGenError(msg);
-	        observer.dataGenEnd();
+            observer.datageGenError(msg);
+            observer.dataGenEnd();
         }
     }
     

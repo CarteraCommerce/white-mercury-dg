@@ -45,28 +45,28 @@ public class JSONDataFileItem {
         this.width = width;
     }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getSeparator() {
-		return separator;
-	}
+    public String getSeparator() {
+        return separator;
+    }
 
-	public void setSeparator(String separator) {
-		this.separator = separator;
-	}
+    public void setSeparator(String separator) {
+        this.separator = separator;
+    }
 
-	public String getType() {
-		return type;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+    public void setType(String type) {
+        this.type = type;
+    }
     
 }

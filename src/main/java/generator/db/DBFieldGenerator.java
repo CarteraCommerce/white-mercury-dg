@@ -66,16 +66,16 @@ public class DBFieldGenerator extends DBField
     }
     
     public String outputFieldGenerator() {
-    	String output = "";
-    	
-    	output = output + "\t\t\t\t\tField Name:\t" + super.getField() + "\n";
-    	output = output + "\t\t\t\t\tField Type:\t" + super.getType() + "\n";
-    	output = output + "\t\t\t\t\tField Size:\t" + String.valueOf(super.getSize()) + "\n";
-    	output = output + "\t\t\t\t\tIs Key?:\t" + String.valueOf(super.isKey()) + "\n";
-    	output = output + "\t\t\t\t\tSQL Type:\t" + String.valueOf(super.getSql_type()) + "\n";
-    	output = output + "\t\t\t\t\tGenerator:\t" + generator + "\n";
-    	output = output + "\t\t\t\t\tGenerator Type:\t" + String.valueOf(generatorType) + "\n";
-    	
-    	return output;
+        String output = "";
+        
+        output = output + "\t\t\t\t\tField Name:\t" + super.getField() + "\n";
+        output = output + "\t\t\t\t\tField Type:\t" + super.getType() + "\n";
+        output = output + "\t\t\t\t\tField Size:\t" + String.valueOf(super.getSize()) + "\n";
+        output = output + "\t\t\t\t\tIs Key?:\t" + String.valueOf(super.isKey()) + "\n";
+        output = output + "\t\t\t\t\tSQL Type:\t" + String.valueOf(super.getSql_type()) + "\n";
+        output = output + "\t\t\t\t\tGenerator:\t" + generator + "\n";
+        output = output + "\t\t\t\t\tGenerator Type:\t" + String.valueOf(generatorType) + "\n";
+        
+        return output;
     }
 }
