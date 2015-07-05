@@ -15,13 +15,13 @@ import generator.misc.SAXDataHandler;
 
 
 public class JSONDataFileOutputSAXHandler extends SAXDataHandler {
-	private Logger logger = Logger.getLogger(JSONDataFileOutputSAXHandler.class);
-	private Vector<JSONDataFileDefinition> vDFDs;
-	private Vector<JSONDataFileItem> vDataItems;
+    private Logger logger = Logger.getLogger(JSONDataFileOutputSAXHandler.class);
+    private Vector<JSONDataFileDefinition> vDFDs;
+    private Vector<JSONDataFileItem> vDataItems;
     private JSONDataFileDefinition dataFileDefinition;
-	private final int DESCRIPTION = 1;
-	private final int NONE = -1;
-	private int parsedElement=NONE;
+    private final int DESCRIPTION = 1;
+    private final int NONE = -1;
+    private int parsedElement=NONE;
     
     public JSONDataFileOutputSAXHandler() {
         vDFDs = new Vector<JSONDataFileDefinition>();

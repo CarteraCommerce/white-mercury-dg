@@ -419,7 +419,7 @@ public class Generator
      */
     public void generate()
     {
-    	StopWatch stopWatch = new LoggingStopWatch("Generator.generate()");
+        StopWatch stopWatch = new LoggingStopWatch("Generator.generate()");
         notifyInit();
         int numOfRecs = dbGenConfig.getCycles();
         List<DBTableGenerator> alDBGenerators = dbGenConfig.getDBTableGenerators();
@@ -588,10 +588,10 @@ public class Generator
     /*
      * private void dataGenError(String msg) {
      *     if (observer != null) {
-     *  	   observer.datageGenError(msg);
-     * 		   observer.dataGenEnd();
+     *         observer.datageGenError(msg);
+     *         observer.dataGenEnd();
      *     }
-	 * 		
+     *      
      * }
      */
 }
