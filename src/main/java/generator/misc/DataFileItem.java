@@ -18,6 +18,7 @@ public class DataFileItem
     private int alignment;
     private String encloseChar;
     private int width;
+    private String name;
     
             
     /** Creates a new instance of DataFileItem */
@@ -65,5 +66,13 @@ public class DataFileItem
     {
          this.encloseChar = encloseChar;
     }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
     
 }

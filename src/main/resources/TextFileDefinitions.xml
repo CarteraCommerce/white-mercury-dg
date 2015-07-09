@@ -1,19 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <datafile-definitions>
-  <File-output-definition delimiter="," filename="TestText" name="TestText" numOfRecs="1000">
-    <description/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="SimpleSequencer" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="RegularExpressionUKPostCodes" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="RegularExpressionUKCarPlates" width="-1"/>
-  </File-output-definition>
-  <File-output-definition delimiter="," filename="white-mercury-dg_test_file.txt" name="generate_test" numOfRecs="100">
-    <description/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
-    <data-item alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
-  </File-output-definition>
+    <File-output-definition delimiter="," filename="simple_uk_population.csv" name="generate_uk_pop" numOfRecs="1000">
+        <description/>
+        <data-item name="sequenceNumber" alignment="1" encloseChar="" randomiser-instance="SimpleSequencer" width="-1"/>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="included" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls" width="-1"/>
+        <data-item name="postCode" alignment="1" encloseChar="" randomiser-instance="RegularExpressionUKPostCodes" width="-1"/>
+        <data-item name="carPlate" alignment="1" encloseChar="" randomiser-instance="RegularExpressionUKCarPlates" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="white-mercury-dg_test_file.csv" name="generate_test" numOfRecs="100">
+        <description/>
+        <data-item name="email" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="basic_recipients_1000.csv" name="generate_recipients" numOfRecs="1000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string)</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="basic_recipients_10k.csv" name="generate_recipients_10k" numOfRecs="10000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string)</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="basic_recipients_100k.csv" name="generate_recipients_100k" numOfRecs="100000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string)</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="basic_recipients_1m.csv" name="generate_recipients_1m" numOfRecs="1000000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string)</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="basic_recipients_10m.csv" name="generate_recipients_10m" numOfRecs="10000000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string)</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="basic_recipients_100m.csv" name="generate_recipients_100m" numOfRecs="100000000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string)</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+    </File-output-definition>
 </datafile-definitions>

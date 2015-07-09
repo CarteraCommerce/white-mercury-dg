@@ -23,4 +23,5 @@
     <randomiser-type name="RegularExpressionRandomiser" jtype="0" panel="generator.panels.PanelRegularExpressionRandomiser" generator="generator.randomisers.RegularExpressionRandomiser"/> 
     <randomiser-type name="EnglishTextRandomiserGeneric" jtype="0" panel="generator.panels.PanelGenericRandomiser" generator="generator.randomisers.EnglishTextRandomiser"/>
     <randomiser-type name="NameGenderRandomiser" jtype="0" panel="" generator="generator.randomisers.NameGenderRandomiser"/>    
+    <randomiser-type name="UUIDRandomiser" jtype="0" panel="" generator="generator.randomisers.UUIDRandomiser"/>
 </randomiser-types>

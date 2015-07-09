@@ -78,7 +78,7 @@ public class MainForm extends JFrame
         ApplicationContext.getInstance().refreshRandomiserInstances();
         
         logger.debug("LOADING FILE DEFINITIONS");
-        ApplicationContext.getInstance().getInstance().refreshFileDefinitions();
+        ApplicationContext.getInstance().getInstance().refreshTextFileDefinitions();
         
         logger.debug("LOADING DB DEFINITIONS");
         ApplicationContext.getInstance().refreshDBDefinitions();
@@ -508,7 +508,7 @@ public class MainForm extends JFrame
     
     private void mnuToolsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_mnuToolsActionPerformed
     {//GEN-HEADEREND:event_mnuToolsActionPerformed
-// TODO add your handling code here:
+    	// TODO add your handling code here:
     }//GEN-LAST:event_mnuToolsActionPerformed
     
     private void mnuRefreshTreeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_mnuRefreshTreeActionPerformed
