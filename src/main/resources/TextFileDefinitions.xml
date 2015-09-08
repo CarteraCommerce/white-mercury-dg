@@ -21,7 +21,7 @@
         <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
         <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
         <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
-        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
         <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
         <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
         <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
@@ -31,7 +31,7 @@
         <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
         <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
         <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
-        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
         <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
         <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
         <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
@@ -41,7 +41,7 @@
         <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
         <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
         <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
-        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
         <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
         <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
         <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
@@ -51,7 +51,7 @@
         <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
         <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
         <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
-        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
         <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
         <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
         <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
@@ -61,7 +61,7 @@
         <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
         <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
         <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
-        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
         <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
         <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
         <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
@@ -71,9 +71,135 @@
         <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
         <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
         <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
-        <data-item name="birthDate" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
         <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
         <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
         <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_201_member_recipients_1000.csv" name="generate_org_201_member_recipients" numOfRecs="1000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId201BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId201MemberIdRandomiserWithNoNull" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_52_member_recipients_1000.csv" name="generate_org_52_member_recipients" numOfRecs="1000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId52BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId52MemberIdRandomiserWithNoNull" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_80_member_recipients_1000.csv" name="generate_org_80_member_recipients" numOfRecs="1000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId80BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId80MemberIdRandomiserWithNoNull" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_235_member_recipients_1000.csv" name="generate_org_235_member_recipients" numOfRecs="1000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId235BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId235MemberIdRandomiserWithNoNull" width="-1"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_76_member_recipients_1000.csv" name="generate_org_76_member_recipients" numOfRecs="1000" includeUpdateFile="true" updateFilename="org_76_member_recipients_1000_update.csv" updateDistribution="30">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId76BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76MemberIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="shoppingFreqSegment" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76ShopFregSegWithNoNull" width="-1" updatable="true"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_76_member_recipients_10k.csv" name="generate_org_76_member_recipients_10k" numOfRecs="10000" includeUpdateFile="true" updateFilename="org_76_member_recipients_10k_update.csv" updateDistribution="30">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId76BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76MemberIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="shoppingFreqSegment" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76ShopFregSegWithNoNull" width="-1" updatable="true"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_76_member_recipients_100k.csv" name="generate_org_76_member_recipients_100k" numOfRecs="100000" includeUpdateFile="true" updateFilename="org_76_member_recipients_100k_update.csv" updateDistribution="30">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId76BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76MemberIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="shoppingFreqSegment" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76ShopFregSegWithNoNull" width="-1" updatable="true"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_76_member_recipients_1m.csv" name="generate_org_76_member_recipients_1m" numOfRecs="1000000" includeUpdateFile="true" updateFilename="org_76_member_recipients_1m_update.csv" updateDistribution="30">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId76BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76MemberIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="shoppingFreqSegment" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76ShopFregSegWithNoNull" width="-1" updatable="true"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_76_member_recipients_10m.csv" name="generate_org_76_member_recipients_10m" numOfRecs="10000000" includeUpdateFile="true" updateFilename="org_76_member_recipients_10m_update.csv" updateDistribution="30">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId76BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76MemberIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="shoppingFreqSegment" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76ShopFregSegWithNoNull" width="-1" updatable="true"/>
+    </File-output-definition>
+    <File-output-definition delimiter="," filename="org_76_member_recipients_100m.csv" name="generate_org_76_member_recipients_100m" numOfRecs="100000000">
+        <description>Generate a CSV-formatted file with the following core attributes for recipients:  firstName (string), lastName (string), gender (enum), dateBirth (date), emailAddress (string), isOptedOut (boolean), and externalRecipientId (string); and the following core attributes for members: externalBrandId (number) and programMemberId (string). In addition, generate a matching update file that will update 30 percent of the recipients.</description>
+        <data-item name="firstName" alignment="1" encloseChar="" randomiser-instance="EnglishFirstnames" width="-1"/>
+        <data-item name="lastName" alignment="1" encloseChar="" randomiser-instance="EnglishLastnames" width="-1"/>
+        <data-item name="gender" alignment="1" encloseChar="" randomiser-instance="SynchGenderWith50Null" width="-1"/>
+        <data-item name="dateBirth" alignment="1" encloseChar="" randomiser-instance="DatesTill2010" width="-1"/>
+        <data-item name="emailAddress" alignment="1" encloseChar="" randomiser-instance="EmailSynch" width="-1"/>
+        <data-item name="isOptedOut" alignment="1" encloseChar="" randomiser-instance="SimpleBooleanNoNulls20True" width="-1"/>
+        <data-item name="externalRecipientId" alignment="1" encloseChar="" randomiser-instance="UniversallyUniqueIdentifierString" width="-1"/>
+        <data-item name="externalBrandId" alignment="1" encloseChar="" randomiser-instance="OrgId76BrandIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="programMemberId" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76MemberIdRandomiserWithNoNull" width="-1"/>
+        <data-item name="shoppingFreqSegment" alignment="1" encloseChar="&quot;" randomiser-instance="OrgId76ShopFregSegWithNoNull" width="-1" updatable="true"/>
     </File-output-definition>
 </datafile-definitions>

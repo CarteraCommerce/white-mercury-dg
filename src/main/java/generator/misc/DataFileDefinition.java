@@ -5,7 +5,9 @@
 
 
 package generator.misc;
+
 import java.util.Vector;
+import generator.misc.DataFileItem;
 
 /**
  *
@@ -13,83 +15,97 @@ import java.util.Vector;
  * It also holds a vector of DataFileItem which define what to output in the
  * text file.
  */
-public class DataFileDefinition
-{
+
+public class DataFileDefinition {
+
     private String name;
     private String description;
-    private Vector outDataItems; //a place holder for DataFileItem
+    private Vector<DataFileItem> outDataItems; //a place holder for DataFileItem
     private String outFilename;
+    private Boolean includeUpdateFile = false;
+    private String updateFilename;
+    private String updateDistribution;
     private String delimiter;
     private long numOfRecs;
-    
-    
+
+
     /** Creates a new instance of FileDefinition */
-    public DataFileDefinition()
-    {
+    public DataFileDefinition() {
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Vector getOutDataItems()
-    {
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Vector<DataFileItem> getOutDataItems() {
         return outDataItems;
     }
 
-    public void setOutDataItems(Vector vOutData)
-    {
+    public void setOutDataItems(Vector<DataFileItem> vOutData) {
         this.outDataItems = vOutData;
     }
 
-    public String getOutFilename()
-    {
+    public String getOutFilename() {
         return outFilename;
     }
 
-    public void setOutFilename(String outFilename)
-    {
+    public void setOutFilename(String outFilename) {
         this.outFilename = outFilename;
     }
 
-    public String getDescription()
-    {
-        return this.description;        
+    public Boolean getIncludeUpdateFile() {
+        return includeUpdateFile;
     }
-    
-    public String getDelimiter()
-    {
+
+    public void setIncludeUpdateFile(Boolean includeUpdateFile) {
+        this.includeUpdateFile = includeUpdateFile;
+    }
+
+    public String getUpdateFilename() {
+        return updateFilename;
+    }
+
+    public void setUpdateFilename(String updateFilename) {
+        this.updateFilename = updateFilename;
+    }
+
+    public String getUpdateDistribution() {
+        return updateDistribution;
+    }
+
+    public void setUpdateDistribution(String updateDistribution) {
+        this.updateDistribution = updateDistribution;
+    }
+
+    public String getDelimiter() {
         return delimiter;
     }
 
-    public void setDelimiter(String delimiter)
-    {
+    public void setDelimiter(String delimiter) {
         this.delimiter = delimiter;
     }
 
-    public long getNumOfRecs()
-    {
+    public long getNumOfRecs() {
         return numOfRecs;
     }
 
-    public void setNumOfRecs(long numOfRecs)
-    {
+    public void setNumOfRecs(long numOfRecs) {
         this.numOfRecs = numOfRecs;
     }
-    
-    public void setDescription(String description)
-    {
-        this.description = description;
-    }
-    
-    public String toString()
-    {
-        return name;        
+
+    public String toString() {
+        return name;
     }
 }
