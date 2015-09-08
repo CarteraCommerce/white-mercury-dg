@@ -74,7 +74,7 @@ public class NameGenderRandomiser implements IRandomiserFunctionality
         int prob;
         prob = nullGen.nextInt(100);
         if(prob<nulls)
-            return null;
+            return "Unidentified";
         
         int len;
         String gender;
@@ -84,6 +84,14 @@ public class NameGenderRandomiser implements IRandomiserFunctionality
         gender = vFirstNames.elementAt(i2);
         len   = gender.length();
         gender = gender.substring(len-1, len);
+
+        if ("m".equals(gender)) {
+            gender = "Male";
+        } else if ("f".equals(gender)) {
+            gender = "Female";
+        } else {
+            gender = "Unidentified";
+        }
         
         return gender;        
     }

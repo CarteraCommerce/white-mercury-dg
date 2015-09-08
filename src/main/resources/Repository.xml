@@ -332,11 +332,15 @@ Simply set the keys-values that the EnglishTextRandomiser needs - of course you 
     <property name="FirstnameSeedField" value="123"/>
   </randomiser-instance>
   <randomiser-instance name="IncomeRandomiserWith95Null" randomiser-type="NumLongRandomiser">
-  	<description>A number randomizer that always returns random income from 50000 to 300000 with 95% returning null.  :)</description>
+    <description>A number randomizer that always returns random income from 50000 to 300000 with 95% returning null.  :)</description>
     <property name="rangesNum" value="1"/>
     <property name="fromField0" value="50000"/>
     <property name="toField0" value="300000"/>
     <property name="percentField0" value="5"/>
     <property name="nullField" value="95"/>
+  </randomiser-instance>
+  <randomiser-instance name="UniversallyUniqueIdentifierString" randomiser-type="UUIDRandomiser">
+    <description>Returns a random UUID with no dashes and no nulls</description>
+    <property name="nullField" value="0"/>
   </randomiser-instance>
 </randomiser-instances>

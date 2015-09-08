@@ -23,7 +23,7 @@ public class UniqueStringRandomiser implements IRandomiserFunctionality
     
     public void setRandomiserInstance(RandomiserInstance ri)
     {        
-        String sCounter, sNull;
+        String sNull;
         LinkedHashMap hashMap;
         
         hashMap  = ri.getProperties();

@@ -49,8 +49,8 @@ public class ApplicationContext
         }
         vRI = utils.loadRandomiserInstances();
         vRT = utils.loadRandomiserTypes();
-        vDFD = utils.loadDataFileDefinitions();
-        vDBFileDefinition = utils.loadDBFileDefinitions();
+        vDFD = utils.loadTextFileDefinitions();
+        vDBFileDefinition = utils.loadDBDefinitions();
         vDBDriverInfo = utils.loadDBDriversInfo();
         vSQLJavaMapping = utils.loadSQLJavaMappings();
     }
@@ -68,14 +68,14 @@ public class ApplicationContext
     }
 
 
-    public void refreshFileDefinitions()
+    public void refreshTextFileDefinitions()
     {
-        vDFD = utils.loadDataFileDefinitions();
+        vDFD = utils.loadTextFileDefinitions();
     }
 
     public void refreshDBDefinitions()
     {
-        vDBFileDefinition = utils.loadDBFileDefinitions();
+        vDBFileDefinition = utils.loadDBDefinitions();
     }
     
     public void refreshDriverInfo()

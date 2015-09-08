@@ -9,6 +9,7 @@ test-output
 /TestText
 /white-mercury-dg-0.0.1-SNAPSHOT.jar
 /*.txt
+/*.csv
 test.out
 *.json
 /src/main/sql
