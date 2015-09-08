@@ -343,4 +343,154 @@ Simply set the keys-values that the EnglishTextRandomiser needs - of course you 
     <description>Returns a random UUID with no dashes and no nulls</description>
     <property name="nullField" value="0"/>
   </randomiser-instance>
+  <randomiser-instance name="ExternalBrandIdWithNoNull" randomiser-type="ListRandomiser">
+    <description>A list randomizer that returns a randomized brand id that is never null.</description>
+    <property name="rangesNum" value="10"/>
+    <property name="nullField" value="0"/>
+    <property name="inputSource" value="list"/>
+    <property name="itemField0" value="251"/>
+    <property name="percentField0" value="10"/>
+    <property name="itemField1" value="301"/>
+    <property name="percentField1" value="10"/>
+    <property name="itemField2" value="106"/>
+    <property name="percentField2" value="10"/>
+    <property name="itemField3" value="203"/>
+    <property name="percentField3" value="10"/>
+    <property name="itemField4" value="247"/>
+    <property name="percentField4" value="10"/>
+    <property name="itemField5" value="363"/>
+    <property name="percentField5" value="10"/>
+    <property name="itemField6" value="364"/>
+    <property name="percentField6" value="10"/>
+    <property name="itemField7" value="365"/>
+    <property name="percentField7" value="10"/>
+    <property name="itemField8" value="227"/>
+    <property name="percentField8" value="10"/>
+    <property name="itemField9" value="228"/>
+    <property name="percentField9" value="10"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId201BrandIdRandomiserWithNoNull" randomiser-type="ListRandomiser">
+    <description>A list randomizer that returns a random brandId for the org 201 every time.</description>
+    <property name="rangesNum" value="2"/>
+    <property name="nullField" value="0"/>
+    <property name="inputSource" value="list"/>
+    <property name="itemField0" value="251"/>
+    <property name="percentField0" value="50"/>
+    <property name="itemField1" value="301"/>
+    <property name="percentField1" value="50"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId201MemberIdRandomiserWithNoNull" randomiser-type="AlphaNumSequencer">
+    <description>A hybrid randomiser that returns a random alpha-numeric string combined with a sequence in a format that resembles org 201 member identifiers.</description>
+    <property name="nullField" value="0"/>
+    <property name="counterStartValue" value="123"/>
+    <property name="alphaNumSize" value="3"/>
+    <property name="seqSize" value="4"/>
+    <property name="useCaps" value="true"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId52BrandIdRandomiserWithNoNull" randomiser-type="ListRandomiser">
+    <description>A list randomizer that returns a random brandId for the org 52 every time.</description>
+    <property name="rangesNum" value="2"/>
+    <property name="nullField" value="0"/>
+    <property name="inputSource" value="list"/>
+    <property name="itemField0" value="106"/>
+    <property name="percentField0" value="58"/>
+    <property name="itemField1" value="203"/>
+    <property name="percentField1" value="42"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId52MemberIdRandomiserWithNoNull" randomiser-type="AlphaNumSequencer">
+    <description>A hybrid randomiser that returns a random alpha-numeric string combined with a sequence in a format that resembles org 52 member identifiers.</description>
+    <property name="nullField" value="0"/>
+    <property name="counterStartValue" value="123456"/>
+    <property name="alphaNumSize" value="4"/>
+    <property name="seqSize" value="6"/>
+    <property name="useCaps" value="true"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId80BrandIdRandomiserWithNoNull" randomiser-type="ListRandomiser">
+    <description>A list randomizer that returns a random brandId for the org 80 every time.</description>
+    <property name="rangesNum" value="1"/>
+    <property name="nullField" value="0"/>
+    <property name="inputSource" value="list"/>
+    <property name="itemField0" value="247"/>
+    <property name="percentField0" value="100"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId80MemberIdRandomiserWithNoNull" randomiser-type="AlphaNumSequencer">
+    <description>A hybrid randomiser that returns a random alpha-numeric string combined with a sequence in a format that resembles org 80 member identifiers.</description>
+    <property name="nullField" value="0"/>
+    <property name="counterStartValue" value="123456"/>
+    <property name="alphaNumSize" value="5"/>
+    <property name="seqSize" value="6"/>
+    <property name="useCaps" value="true"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId235BrandIdRandomiserWithNoNull" randomiser-type="ListRandomiser">
+    <description>A list randomizer that returns a random brandId for the org 235 every time.</description>
+    <property name="rangesNum" value="3"/>
+    <property name="nullField" value="0"/>
+    <property name="inputSource" value="list"/>
+    <property name="itemField0" value="363"/>
+    <property name="percentField0" value="96"/>
+    <property name="itemField1" value="364"/>
+    <property name="percentField1" value="1"/>
+    <property name="itemField2" value="365"/>
+    <property name="percentField2" value="3"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId235MemberIdRandomiserWithNoNull" randomiser-type="UUIDRandomiser">
+    <description>A UUID randomiser that returns a random UUID string that resembles org 235 member identifiers.</description>
+    <property name="nullField" value="0"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId76BrandIdRandomiserWithNoNull" randomiser-type="ListRandomiser">
+    <description>A list randomizer that returns a random brandId for the org 76 every time.</description>
+    <property name="rangesNum" value="2"/>
+    <property name="nullField" value="0"/>
+    <property name="inputSource" value="list"/>
+    <property name="itemField0" value="227"/>
+    <property name="percentField0" value="63"/>
+    <property name="itemField1" value="228"/>
+    <property name="percentField1" value="37"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId76MemberIdRandomiserWithNoNull" randomiser-type="AlphaNumSequencer">
+    <description>A hybrid randomiser that returns a random alpha-numeric string combined with a sequence in a format that resembles org 76 member identifiers.</description>
+    <property name="nullField" value="0"/>
+    <property name="counterStartValue" value="1234"/>
+    <property name="alphaNumSize" value="4"/>
+    <property name="seqSize" value="4"/>
+    <property name="useCaps" value="true"/>
+  </randomiser-instance>
+  <randomiser-instance name="OrgId76ShopFregSegWithNoNull" randomiser-type="ListRandomiser">
+    <description>A list randomizer that returns a random shopping frequency segment value for the org 76 every time.</description>
+    <property name="rangesNum" value="16"/>
+    <property name="nullField" value="0"/>
+    <property name="inputSource" value="list"/>
+    <property name="itemField0" value="Active, 1 Shop"/>
+    <property name="percentField0" value="2"/>
+    <property name="itemField1" value="Active, 2 - 4 Shops"/>
+    <property name="percentField1" value="2"/>
+    <property name="itemField2" value="Active, 5+ Shops"/>
+    <property name="percentField2" value="2"/>
+    <property name="itemField3" value="Lapsed, 12 Months"/>
+    <property name="percentField3" value="12"/>
+    <property name="itemField4" value="Lapsed, 6 Months"/>
+    <property name="percentField4" value="5"/>
+    <property name="itemField5" value="New Member, 0 Shops"/>
+    <property name="percentField5" value="3"/>
+    <property name="itemField6" value="New Member, 1 Shop"/>
+    <property name="percentField6" value="1"/>
+    <property name="itemField7" value="Non-Shopper, 181 - 365 Days"/>
+    <property name="percentField7" value="9"/>
+    <property name="itemField8" value="Non-Shopper, 366 - 730 Days"/>
+    <property name="percentField8" value="17"/>
+    <property name="itemField9" value="Non-Shopper, 46 - 90 Days"/>
+    <property name="percentField9" value="2"/>
+    <property name="itemField10" value="Non-Shopper, 91 - 180 Days"/>
+    <property name="percentField10" value="3"/>
+    <property name="itemField11" value="Pre-Lapsed, 1 Shop"/>
+    <property name="percentField11" value="2"/>
+    <property name="itemField12" value="Pre-Lapsed, 2 - 4 Shops"/>
+    <property name="percentField12" value="1"/>
+    <property name="itemField13" value="Pre-Lapsed, 5+ Shops"/>
+    <property name="percentField13" value="1"/>
+    <property name="itemField14" value="Unengaged, 731+ Days"/>
+    <property name="percentField14" value="37"/>
+    <property name="itemField15" value="Welcome Stream"/>
+    <property name="percentField15" value="1"/>
+  </randomiser-instance>
 </randomiser-instances>

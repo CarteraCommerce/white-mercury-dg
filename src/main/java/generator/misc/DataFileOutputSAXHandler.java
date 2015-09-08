@@ -4,12 +4,10 @@
  */
 
 
-
 package generator.misc;
-import java.util.LinkedHashMap;
+
 import java.util.Vector;
 import org.apache.log4j.Logger;
-import generator.extenders.RandomiserInstance;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
@@ -19,9 +17,10 @@ import org.xml.sax.SAXException;
  * for generating text data to a specific file (DataFileDefinition).
  * Data are loaded in the initial loading of the application.
  */
-public class DataFileOutputSAXHandler extends SAXDataHandler
-{
+public class DataFileOutputSAXHandler extends SAXDataHandler {
+    
     private Logger logger = Logger.getLogger(DataFileOutputSAXHandler.class);
+    
     private Vector<DataFileDefinition> vDFDs; //the output definitions
     
     //each output definition holds a number of data items, a data item
@@ -29,31 +28,28 @@ public class DataFileOutputSAXHandler extends SAXDataHandler
     // how to format its output.
     private Vector<DataFileItem> vDataItems;
     private DataFileDefinition dataFileDefinition;
+    
     //parsing the description
-   private final int DESCRIPTION = 1;
-   private final int NONE = -1;
-   private int parsedElement=NONE; //used to retrieve the description element
+    private final int DESCRIPTION = 1;
+    private final int NONE = -1;
+    private int parsedElement=NONE; //used to retrieve the description element
     
     
-    public DataFileOutputSAXHandler()
-    {
-        vDFDs = new Vector();
+    public DataFileOutputSAXHandler() {
+        vDFDs = new Vector<DataFileDefinition>();
     }
     
-    public void startDocument() throws SAXException
-    {
+    public void startDocument() throws SAXException {
         logger.debug("Document parsing started");
     }
     
     
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException
-    {
+    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         String attribValue = null;
         
         
         logger.debug("Element found:"+qName);
-        if(qName.equalsIgnoreCase("file-output-definition"))
-        {
+        if(qName.equalsIgnoreCase("file-output-definition")) {
             dataFileDefinition = new DataFileDefinition();
             attribValue = attributes.getValue("delimiter");
             dataFileDefinition.setDelimiter(attribValue);
@@ -61,15 +57,27 @@ public class DataFileOutputSAXHandler extends SAXDataHandler
             attribValue = attributes.getValue("filename");
             dataFileDefinition.setOutFilename(attribValue);
             
-            try
-            {
+            try {
                 attribValue = attributes.getValue("numOfRecs");
                 dataFileDefinition.setNumOfRecs(Integer.parseInt(attribValue));
-            }
-            catch(Exception e)
-            {
+            } catch(Exception e) {
                 logger.error("Error during integer conversion for numOfRecs:"+attribValue);
                 dataFileDefinition.setNumOfRecs(0);
+            }
+            
+            try {
+                attribValue = attributes.getValue("includeUpdateFile");
+                dataFileDefinition.setIncludeUpdateFile(Boolean.parseBoolean(attribValue));
+            } catch(Exception e) {
+                logger.error("Error during boolean conversion for includeUpdateFile:"+attribValue);
+                dataFileDefinition.setIncludeUpdateFile(false);
+            }
+            
+            if (dataFileDefinition.getIncludeUpdateFile()) {
+                attribValue = attributes.getValue("updateFilename");
+                dataFileDefinition.setUpdateFilename(attribValue);
+                attribValue = attributes.getValue("updateDistribution");
+                dataFileDefinition.setUpdateDistribution(attribValue);
             }
             
             attribValue = attributes.getValue("name");
@@ -81,15 +89,12 @@ public class DataFileOutputSAXHandler extends SAXDataHandler
                     + dataFileDefinition.getNumOfRecs() );
         }
         
-        if(qName.equalsIgnoreCase("description"))
-        {
+        if(qName.equalsIgnoreCase("description")) {
             parsedElement=DESCRIPTION;
-        }        
+        }
         //retrieve randomiser instance name, its width, alignment and enclosing char
-        if(qName.equalsIgnoreCase("data-item"))
-        {
-            if(vDataItems==null)
-                vDataItems = new Vector();
+        if(qName.equalsIgnoreCase("data-item")) {
+            if(vDataItems==null) vDataItems = new Vector<DataFileItem>();
             
             DataFileItem dataItem = new DataFileItem();
             
@@ -97,16 +102,13 @@ public class DataFileOutputSAXHandler extends SAXDataHandler
             if (attribValue.length()>0) {
                 dataItem.setName(attribValue);
             } else {
-            	dataItem.setName("");
+                dataItem.setName("");
             }
            
-            try
-            {
+            try {
                 attribValue = attributes.getValue("alignment");
                 dataItem.setAlignment(Integer.parseInt(attribValue));
-            }
-            catch(Exception e)
-            {
+            } catch(Exception e) {
                 logger.error("Error during integer conversion for alignment:"+attribValue);
                 dataItem.setAlignment(Constants.ALIGN_LEFT);
             }
@@ -118,16 +120,22 @@ public class DataFileOutputSAXHandler extends SAXDataHandler
             attribValue = attributes.getValue("randomiser-instance");
             dataItem.setRandomiserInstanceName(attribValue);
             
-            try
-            {
+            try {
                 attribValue = attributes.getValue("width");
                 dataItem.setWidth(Integer.parseInt(attribValue));
-            }
-            catch(Exception e)
-            {
+            } catch(Exception e) {
                 logger.error("Error during integer conversion for width:"+attribValue);
                 dataItem.setAlignment(Constants.ALIGN_LEFT);
             }
+            
+            try {
+                attribValue = attributes.getValue("updatable");
+                dataItem.setUpdatable(Boolean.parseBoolean(attribValue));
+            } catch(Exception e) {
+                logger.error("Error during boolean conversion for updatable:"+attribValue);
+                dataItem.setUpdatable(false);
+            }
+
             //add it to the vector of data items, this will be linked to the data file definition
             vDataItems.add(dataItem);
         }
@@ -159,7 +167,7 @@ public class DataFileOutputSAXHandler extends SAXDataHandler
     }
     
     //returns the data, this is what the user should actually call.
-    public Vector getData()
+    public Vector<DataFileDefinition> getData()
     {
         logger.debug("Returning vector, size is:"+vDFDs.size());
         return vDFDs;
