@@ -106,7 +106,7 @@ public class Utils
         return vData;
     }
     
-    public Vector<DataFileDefinition> loadDataFileDefinitions()
+    public Vector<DataFileDefinition> loadTextFileDefinitions()
     {
         Vector<DataFileDefinition> vData;
         RandomDefinitionsBuilder builder = new RandomDefinitionsBuilder();
@@ -119,12 +119,12 @@ public class Utils
     }
     
     
-    public Vector<DBFileDefinition> loadDBFileDefinitions()
+    public Vector<DBFileDefinition> loadDBDefinitions()
     {
         Vector<DBFileDefinition> vData;
         RandomDefinitionsBuilder builder = new RandomDefinitionsBuilder();
         
-        builder.setFilename("DBFileDefinitions.xml");
+        builder.setFilename("DBDefinitions.xml");
         builder.setSAXHandler(new DBDefinitionSAXHandler() );
         vData = builder.getElements();
         

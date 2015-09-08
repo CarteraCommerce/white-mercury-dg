@@ -92,6 +92,14 @@ public class DataFileOutputSAXHandler extends SAXDataHandler
                 vDataItems = new Vector();
             
             DataFileItem dataItem = new DataFileItem();
+            
+            attribValue = attributes.getValue("name");
+            if (attribValue.length()>0) {
+                dataItem.setName(attribValue);
+            } else {
+            	dataItem.setName("");
+            }
+           
             try
             {
                 attribValue = attributes.getValue("alignment");

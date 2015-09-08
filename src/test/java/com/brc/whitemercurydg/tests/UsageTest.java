@@ -19,8 +19,8 @@ import com.brc.whitemercurydg.RunMode;
 
 public class UsageTest {
 
-	private static final int USAGETEST_OUT_LEN = 1080;
-	private static final int USAGETEST_WITH_DUMMY_ARG_OUT_LEN = 1289;
+	private static final int USAGETEST_OUT_LEN = 1187;
+	private static final int USAGETEST_WITH_DUMMY_ARG_OUT_LEN = 1396;
 	private static final String DUMMY_ARG = "--dummyArg";
 
 	@Test(groups = { "full", "smoke" })

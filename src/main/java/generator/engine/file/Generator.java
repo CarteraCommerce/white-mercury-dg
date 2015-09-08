@@ -65,7 +65,7 @@ public class Generator implements ProgressUpdateObservable
         vRandomiserInstances = utils.loadRandomiserInstances();
         
         //load file definitions
-        vDataFileDefinitions = utils.loadDataFileDefinitions();
+        vDataFileDefinitions = utils.loadTextFileDefinitions();
         logger.debug("Loading data from files (RandomiserTypes, randomiser instances, file definitions. Done");
     }
     
@@ -306,6 +306,31 @@ public class Generator implements ProgressUpdateObservable
         {
             logger.error("Error while initialising a generator",e);
             observer.datageGenError("Error while initialising a generator:"+e);
+            return;
+        }
+
+        try {
+            outLine="";
+            sb = new StringBuffer();
+            
+            for (int j = 0; j < vDataItems.size(); j++) {
+                //retrieve format parameters for this generator
+                DataFileItem dataItem = vDataItems.elementAt(j);
+                sb.append(dataItem.getEncloseChar());
+                sb.append(dataItem.getName());
+                sb.append(dataItem.getEncloseChar());
+                if ( j < (vDataItems.size() - 1)) {
+                	sb.append(dataFileDefinition.getDelimiter());
+                }
+            }
+
+            outLine = sb.toString();
+            fileWriter.write(outLine);
+            fileWriter.newLine();
+            logger.debug(outLine);
+        }
+        catch(IOException ioe) {
+            logger.warn("Exception error while writing header row", ioe);
             return;
         }
         
