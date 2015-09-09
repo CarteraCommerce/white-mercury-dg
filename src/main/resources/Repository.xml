@@ -339,6 +339,36 @@ Simply set the keys-values that the EnglishTextRandomiser needs - of course you 
     <property name="percentField0" value="5"/>
     <property name="nullField" value="95"/>
   </randomiser-instance>
+  <randomiser-instance name="DatesFrom1940To2000with45Null" randomiser-type="DateRandomiser">
+    <description>A simple date generator which generates date starting from 1940-01-01 until the year 2001.</description>
+    <property name="rangesNum" value="1"/>
+    <property name="fromField0" value="1940-01-01"/>
+    <property name="toField0" value="2000-12-31"/>
+    <property name="percentField0" value="55"/>
+    <property name="nullField" value="45"/>
+    <property name="selectedDays" value="0000000"/>
+    <property name="dateFormat" value="yyyy-MM-dd'T'HH:mm:ssZ"/>
+  </randomiser-instance>
+  <randomiser-instance name="DatesFrom1940To2000" randomiser-type="DateRandomiser">
+    <description>A simple date generator which generates date starting from 1940-01-01 until the year 2001.</description>
+    <property name="rangesNum" value="1"/>
+    <property name="fromField0" value="1940-01-01"/>
+    <property name="toField0" value="2000-12-31"/>
+    <property name="percentField0" value="100"/>
+    <property name="nullField" value="0"/>
+    <property name="selectedDays" value="0000000"/>
+    <property name="dateFormat" value="yyyy-MM-dd'T'HH:mm:ssZ"/>
+  </randomiser-instance>
+  <randomiser-instance name="ShortDatesFrom1940To2000" randomiser-type="DateRandomiser">
+    <description>A simple date generator which generates date starting from 1940-01-01 until the year 2001.</description>
+    <property name="rangesNum" value="1"/>
+    <property name="fromField0" value="1940-01-01"/>
+    <property name="toField0" value="2000-12-31"/>
+    <property name="percentField0" value="100"/>
+    <property name="nullField" value="0"/>
+    <property name="selectedDays" value="0000000"/>
+    <property name="dateFormat" value="yyyy-MM-dd"/>
+  </randomiser-instance>
   <randomiser-instance name="UniversallyUniqueIdentifierString" randomiser-type="UUIDRandomiser">
     <description>Returns a random UUID with no dashes and no nulls</description>
     <property name="nullField" value="0"/>
